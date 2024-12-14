@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(90deg, #ffb6c1, #ffffff);
+    background-size: 200% 200%;
+    font-family: Lucida system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: gradientAnimation 5s infinite alternate;
+}
+
+
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 75px;
+    color: #333;
+}
+
+
+
+button {
+    padding: 40px 50px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.yes-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,1);
+    transition: all 0.3s ease-in-out;
+}
+.yes-btn:hover {
+    background-color: #218838;
+}
+
+
+.no-btn {
+    background-color: #dc3545;
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,1);
+    transition: top 0.3s, left 0.3s;
+    
+}
+
+
+.side-images {
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    width: 300px; 
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+.side-images img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* Sol kenar */
+.side-images.left {
+    left: 0; /* Sol kenara sabitle */
+}
+
+/* Sağ kenar */
+.side-images.right {
+    right: 0; /* Sağ kenara sabitle */
+}
+
